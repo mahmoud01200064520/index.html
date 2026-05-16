@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Ahmed Hussien | Chief Production & Quality Operations Director</title>
+    <!-- FontAwesome Library for Industry Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --primary: #0b2240;      /* Royal Corporate Navy */
+            --secondary: #c5a059;    /* Executive Gold Accent */
+            --dark-neutral: #1e2937; /* Deep Charcoal Text */
+            --light-neutral: #64748b;/* Muted Slate Text */
+            --bg-canvas: #f4f6f9;    /* Premium Light Canvas */
+            --card-bg: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-canvas);
+            color: var(--dark-neutral);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Banner with Engineering Blueprint Background Pattern */
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(11, 34, 64, 0.95), rgba(15, 46, 86, 0.9)), 
+                        url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 50px;
+            color: #ffffff;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            box-shadow: 0 20px 45px rgba(11, 34, 64, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .profile-frame {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .profile-frame::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border: 2px solid var(--secondary);
+            border-radius: 50%;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            display: block;
+        }
+
+        .header-meta h1 {
+            font-size: 2.5rem;
+            margin: 0 0 6px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        .header-meta .headline {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .contact-grid a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .contact-grid a:hover {
+            color: var(--secondary);
+        }
+
+        .contact-grid i {
+            color: var(--secondary);
+            margin-right: 8px;
+            width: 18px;
+        }
+
+        /* Brand Logos Grid section */
+        .brands-section {
+            background: #ffffff;
+            padding: 25px 50px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .brand-logo {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #94a3b8;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+        }
+
+        .brand-logo span.haier { color: #0056b3; }
+        .brand-logo span.sharp { color: #e60012; }
+        .brand-logo span.araby { color: #0b2240; }
+
+        .brand-logo i {
+            font-size: 1.5rem;
+        }
+
+        /* Executive Metrics Dashboard */
+        .dashboard-container {
+            padding: 30px 50px 10px 50px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .dashboard-card {
+            background: #f8fafc;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .dashboard-card .value {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .dashboard-card .label {
+            font-size: 0.75rem;
+            color: var(--light-neutral);
+            margin-top: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Interactive Dropdown (Accordion) Styling */
+        .accordion-container {
+            padding: 20px 50px 50px 50px;
+        }
+
+        .accordion-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+        }
+
+        .accordion-header {
+            background: #f8fafc;
+            padding: 20px 24px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .accordion-header:hover {
+            background: #f1f5f9;
+        }
+
+        .accordion-icon {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+        }
+
+        .accordion-body {
+            padding: 26px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 3000px; 
+            transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-item.active .accordion-header {
+            background: #f0f4f8;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .summary-block {
+            font-size: 1.05rem;
+            text-align: justify;
+            color: var(--dark-neutral);
+        }
+
+        /* Timeline / Job Items */
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .timeline-title {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .timeline-sub {
+            display: flex;
+            justify-content: space-between;
+            color: var(--secondary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 0.98rem;
+        }
+
+        /* Grid for Certifications with Visual Image Icons */
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .matrix-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 16px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .cert-visual-icon {
+            width: 42px;
+            height: 42px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--primary);
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .cert-visual-icon.linkedin-badge {
+            color: #0077b5;
+            border-color: #0077b5;
+        }
+
+        .cert-visual-icon.coursera-badge {
+            color: #0056d2;
+            border-color: #0056d2;
+        }
+
+        .matrix-details h4 {
+            margin: 0 0 4px 0;
+            color: var(--primary);
+            font-size: 0.98rem;
+            font-weight: 600;
+        }
+
+        .matrix-details p {
+            margin: 0;
+            color: var(--light-neutral);
+            font-size: 0.85rem;
+        }
+
+        .matrix-details .credential {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 4px;
+            word-break: break-all;
+        }
+
+        .matrix-details a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Core Competencies Tag Clouds */
+        .competency-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .competency-tag {
+            background: #f1f5f9;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+        }
+
+        .competency-tag.highlight {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .competency-tag.accent {
+            background: #fef9c3;
+            color: #854d0e;
+            border-color: #fef08a;
+        }
+
+        @media (max-width: 850px) {
+            .hero-banner { flex-direction: column; text-align: center; gap: 20px; padding: 40px 20px; }
+            .contact-grid, .matrix-grid, .dashboard-grid, .brands-section { grid-template-columns: 1fr; }
+            .timeline-title, .timeline-sub { flex-direction: column; gap: 2px; }
+            .accordion-container, .dashboard-container, .brands-section { padding-left: 20px; padding-right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Hero Banner Wrapper with Blueprint Tech Background -->
+    <div class="hero-banner">
+        <div class="profile-frame">
+            <img src="https://ibb.co" alt="Mahmoud Ahmed Hussien" class="profile-img">
+        </div>
+        
+        <div class="header-meta">
+            <h1>Mahmoud Ahmed Hussien</h1>
+            <div class="headline">Chief Production & Quality Operations Director</div>
+            
+            <div class="contact-grid">
+                <div><i class="fa-solid fa-location-dot"></i>10th of Ramadan City, Sharqia, Egypt</div>
+                <div><i class="fa-solid fa-envelope"></i><a href="mailto:mahmoudahmed3409430@gmail.com">mahmoudahmed3409430@gmail.com</a></div>
+                <div><i class="fa-solid fa-phone"></i>+201200064520</div>
+                <div><i class="fa-brands fa-linkedin"></i><a href="https://linkedin.com" target="_blank">://linkedin.com</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Corporate Brand Affiliations / Track Record Logos -->
+    <div class="brands-section">
+        <div class="brand-logo"><i class="fa-solid fa-tv"></i> <span class="haier">Haier</span></div>
+        <div class="brand-logo"><i class="fa-solid fa-snowflake"></i> <span class="sharp">Sharp</span></div>
+        <div class="brand-logo"><i class="fa-solid fa-industry"></i> <span class="araby">El-Araby Group</span></div>
+        <div class="brand-logo"><i class="fa-solid fa-wind"></i> <span>HVAC Systems</span></div>
+    </div>
+
+    <!-- Operational KPI Dashboard -->
+    <div class="dashboard-container">
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <div class="value">112%</div>
+                <div class="label">Max Line Yield</div>
+            </div>
+            <div class="dashboard-card">
+                <div class="value">84%</div>
+                <div class="label">OEE Efficiency</div>
+            </div>
+            <div class="dashboard-card">
+                <div class="value">-44%</div>
+                <div class="label">PPM Defect Drop</div>
+            </div>
+            <div class="dashboard-card">
+                <div class="value">4 Hrs</div>
+                <div class="label">Monthly Downtime</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- START OF ACCORDION SYSTEM -->
+    <div class="accordion-container">
+
+        <!-- Section 1: Executive Profile (Open by Default) -->
+        <div class="accordion-item active">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Executive Profile & Vision</span>
+                <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <p class="summary-block">
+                        Highly accomplished and metrics-driven Industrial Production & Quality Operations Director with over 6 years of executive expertise directing massive manufacturing plants within premier multinational environments. Proven authority in aligning macro-operational targets with corporate strategic directives across complex Chinese and Japanese manufacturing cultures (Haier Egypt & El-Araby Group). Masters the application of Lean Six Sigma systems, Total Quality Management (TQM) principles, and advanced automation optimization to maximize OEE, enhance workforce synergy, and implement strict HSE compliance codes across safety-centric environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Industrial Track Record -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Industrial Sessional Track Record</span>
+                <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-title">
+                            <span>Senior Production Engineer (TV Plant)</span>
+                            <span>08/2025 - Present</span>
+                        </div>
+                        <div class="timeline-sub">
+                            <span>HAIER Egypt Electric</span>
+                            <span>Sharqia, Egypt</span>
+                        </div>
+                        <ul>
+                            <li>Spearhead television assembly plant operations, supervising high-capacity workflows within a multinational corporate structure.</li>
+                            <li>Implement rigorous Line Balancing and industrial ergonomics to fulfill aggressive weekly product yield parameters.</li>
+                            <li>Champion the execution of Lean Manufacturing frameworks, eliminating non-value-added steps to accelerate operational cycle times.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-title">
+                            <span>Factory Manager (HVAC Systems Plant)</span>
+                            <span>10/2024 - 08/2025</span>
+                        </div>
+                        <div class="timeline-sub">
+                            <span>ASAB Factory</span>
+                            <span>Riyadh, Saudi Arabia</span>
+                        </div>
+                        <ul>
+                            <li>Directed end-to-end plant operations, resource procurement, and technical workflows for a flagship HVAC manufacturing facility.</li>
+                            <li>Designed and integrated Standard Operating Procedures (SOPs), boosting labor productivity and resource dispatch tracking.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-title">
+                            <span>Process Quality Control Engineer (Tempered Glass Industry)</span>
+                            <span>01/2023 - 10/2024</span>
+                        </div>
+                        <div class="timeline-sub">
+                            <span>Tempered Glass Manufacturing Plant</span>
+                            <span>Sharqia, Egypt</span>
+                        </div>
+                        <ul>
+                            <li>Governed critical plant metrics (OEE, PPM, COPQ) and executed statistical capability studies to optimize process stability.</li>
+                            <li>Leveraged advanced quality assurance utilities (SPC, FMEA, 8D Root Cause Analysis) to establish strict product compliance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-title">
+                            <span>Assembly Line Engineer & Shift Manager (Sharp Appliances)</span>
+                            <span>01/2019 - 12/2023</span>
+                        </div>
+                        <div class="timeline-sub">
+                            <span>Sharp Refrigerators (ELARABY Group)</span>
+                            <span>Menofiya, Egypt</span>
+                        </div>
+                        <ul>
+                            <li>Supervised large-scale assembly procedures, executing direct management across 8 foundational manufacturing segments.</li>
+                            <li>Embedded Japanese corporate excellence practices (Kaizen, 5S) to constantly lower scrap volumes and overhead costs.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Verified Credentials Matrix -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Global Certified Credentials Matrix</span>
+                <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="matrix-grid">
+                        
+                        <div class="matrix-card" style="border-left: 3px solid var(--secondary);">
+                            <div class="cert-visual-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="matrix-details">
+                                <h4>Certified Quality Engineer (CQE) — 200 Hours</h4>
+                                <p>The Excellence Center | Lean Six Sigma Council</p>
+                                <div class="credential">S/N: EC-CQE-1023-12</div>
+                            </div>
+                        </div>
+
+                        <div class="matrix-card">
+                            <div class="cert-visual-icon linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="matrix-details">
+                                <h4>Six Sigma Black Belt Certification</h4>
+                                <p>LinkedIn Learning | PMI Authorized Training Partner</p>
+                                <div class="credential">Domain: Continuous Process Improvement & Statistics</div>
+                            </div>
+                        </div>
+
+                        <div class="matrix-card">
+                            <div class="cert-visual-icon coursera-badge"><i class="fa-brands fa-coursera"></i></div>
+                            <div class="matrix-details">
+                                <h4>Mastering TQM: Quality Systems</h4>
+                                <p>EDUCBA | Coursera Verified Academic Authority</p>
+                                <div class="credential"><a href="https://coursera.org" target="_blank">Verify Credential Link</a></div>
+                            </div>
+                        </div>
+
+                        <div class="matrix-card">
+                            <div class="cert-visual-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="matrix-details">
+                                <h4>Occupational Safety & Environmental Compliance (HSE)</h4>
+                                <p>OHS Institute | Statutory Safety Committees (Law 12/2003)</p>
+                                <div class="credential">S/N: 50/p/3631 | Menofiya Authority</div>
+                            </div>
+                        </div>
+
+                        <div class="matrix-card">
+                            <div class="cert-visual-icon linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="matrix-details">
+                                <h4>Balanced Scorecard and Key Performance Indicators (KPIs)</h4>
+                                <p>LinkedIn Learning | NASBA Registered Quality Provider</p>
+                                <div class="credential">ID: 6b35c8d04cc9da65db03e6a07f28c1204fc51796accd4ef84abc00f5d21a7dd8</div>
+                            </div>
+                        </div>
+
+                        <div class="matrix-card">
+                            <div class="cert-visual-icon linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="matrix-details">
+                                <h4>How to Measure and Improve Organizational Performance</h4>
+                                <p>LinkedIn Learning | Project Management Institute (PMI)</p>
+                                <div class="credential">ID: 948fa3eb0904fa57eb1013f14b03f2f3bb6a641ce11d9bcc7ed21f2664e0b7ba5</div>
+                            </div>
+                        </div>
+
+                        <div class="matrix-card">
+                            <div class="cert-visual-icon linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="matrix-details">
+                                <h4>Skills for Your First 90 Days as a New Manager</h4>
+                                <p>LinkedIn Learning | Leadership Development</p>
+                                <div class="credential">ID: 39206351f475a5ffe0f4813a49dde3fd8292071763a059eb54559c4c4594322c</div>
+                            </div>
+                        </div>
+
+                        <div class="matrix-card">
+                            <div class="cert-visual-icon linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="matrix-details">
+                                <h4>Management Essentials & Corporate Strategy</h4>
+                                <p>LinkedIn Learning | PMI Endorsed Framework</p>
+                                <div class="credential">ID: c9d2758ccdb80f11a39e4304b9e159c96e3fd7bf4877e74cc07ed22e84c0f0af</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Core Competencies -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Core Expertise & Operational Vectors</span>
+                <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="competency-box">
+                        <div class="competency-tag highlight">Operations Management & Leadership</div>
+                        <div class="competency-tag highlight">Six Sigma Black Belt Architecture</div>
+                        <div class="competency-tag highlight">Lean Manufacturing Infrastructure</div>
+                        <div class="competency-tag accent">Total Quality Management (TQM)</div>
+                        <div class="competency-tag accent">Certified Quality Engineering (CQE)</div>
+                        <div class="competency-tag">Statistical Process Control (SPC)</div>
+                        <div class="competency-tag">FMEA & Failure Analysis</div>
+                        <div class="competency-tag">HSE Workplace Safety Laws</div>
+                        <div class="competency-tag">Balanced Scorecard & Corporate KPIs</div>
+                        <div class="competency-tag">Advanced Data Analysis & Insights</div>
+                        <div class="competency-tag">ISO 9001:2015 Management Systems</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Academic Foundation -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Academic Foundation</span>
+                <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="timeline-item" style="margin-bottom: 0;">
+                        <div class="timeline-title">
+                            <span>Bachelor of Mechanical Engineering</span>
+                            <span>Graduated: 2017</span>
+                        </div>
+                        <div class="timeline-sub">
+                            <span>Menofiya University</span>
+                            <span>Menofiya, Egypt</span>
+                        </div>
+                        <p style="margin: 5px 0 0 0; color: var(--light-neutral); font-size: 0.95rem;">Specialization: Industrial & Mechanical Systems Integration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- END OF ACCORDION SYSTEM -->
+
+</div>
+
+<!-- Interactive Accordion JavaScript Logic -->
+<script>
+    function toggleAccordion(header) {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        document.querySelectorAll('.accordion-item').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
