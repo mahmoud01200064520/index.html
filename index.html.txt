@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Ahmed Hussien | Senior Production & Quality Specialist</title>
+    <style>
+        :root {
+            --primary: #0b2240;      /* Royal Corporate Navy */
+            --secondary: #c5a059;    /* Executive Gold Accent */
+            --dark-neutral: #1e2937; /* Deep Charcoal Text */
+            --light-neutral: #64748b;/* Muted Slate Text */
+            --bg-canvas: #f4f6f9;    /* Premium Light Canvas */
+            --card-bg: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-canvas);
+            color: var(--dark-neutral);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            box-shadow: 0 20px 45px rgba(11, 34, 64, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #0b2240 0%, #152e52 100%);
+            padding: 55px 50px;
+            color: #ffffff;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        .profile-frame {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        /* Premium Executive Glowing Gold Ring Border Design around Profile Image */
+        .profile-frame::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border: 4px solid var(--secondary);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.7);
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0b2240;
+            display: block;
+            background-color: #ffffff;
+        }
+
+        .header-meta h1 {
+            font-size: 2.4rem;
+            margin: 0 0 6px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        .header-meta .headline {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .contact-grid a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .brands-section {
+            background: #ffffff;
+            padding: 25px 50px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .brand-logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #1e2937;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+        }
+
+        .brand-logo .haier { color: #0056b3; }
+        .brand-logo .sharp { color: #e60012; }
+        .brand-logo .araby { color: #0b2240; }
+
+        .dashboard-container {
+            padding: 35px 50px 10px 50px;
+        }
+
+        .dashboard-container h3 {
+            margin: 0 0 20px 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .dashboard-card {
+            background: #f8fafc;
+            padding: 15px 10px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .dashboard-card .value {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .dashboard-card .label {
+            font-size: 0.72rem;
+            color: var(--light-neutral);
+            margin-top: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .accordion-container {
+            padding: 20px 50px 50px 50px;
+        }
+
+        .accordion-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+        }
+
+        .accordion-header {
+            background: #f8fafc;
+            padding: 20px 24px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .accordion-header:hover {
+            background: #f1f5f9;
+        }
+
+        .accordion-icon {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .accordion-body {
+            padding: 26px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 7000px; 
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-item.active .accordion-header {
+            background: #f0f4f8;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .showcase-block {
+            margin-bottom: 35px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .showcase-block h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .showcase-block p {
+            margin: 0 0 20px 0;
+            color: var(--light-neutral);
+            font-size: 0.98rem;
+        }
+
+        .document-wrapper {
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-top: 15px;
+        }
+
+        .document-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .timeline-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .timeline-title { display: flex; justify-content: space-between; font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+        .timeline-sub { display: flex; justify-content: space-between; color: var(--secondary); font-size: 0.95rem; font-weight: 600; margin-bottom: 12px; }
+        ul { padding-left: 20px; margin: 0; }
+        li { margin-bottom: 6px; font-size: 0.98rem; }
+
+        .matrix-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .matrix-card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px 20px; border-radius: 8px; display: flex; align-items: flex-start; gap: 15px; }
+        .cert-visual-icon { width: 42px; height: 42px; background: #ffffff; border: 2px solid var(--primary); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--primary); flex-shrink: 0; }
+        .matrix-details h4 { margin: 0 0 4px 0; color: var(--primary); font-size: 0.98rem; font-weight: 600; }
+        .matrix-details p { margin: 0; color: var(--light-neutral); font-size: 0.85rem; }
+        .matrix-details .credential { font-size: 0.75rem; color: #94a3b8; margin-top: 4px; word-break: break-all; }
+        .matrix-details a { color: var(--secondary); text-decoration: none; font-weight: 600; }
+
+        .competency-box { display: flex; flex-wrap: wrap; gap: 10px; }
+        .competency-tag { background: #f1f5f9; color: var(--primary); padding: 8px 16px; border-radius: 6px; font-size: 0.88rem; font-weight: 600; border: 1px solid #e2e8f0; }
+        .competency-tag.highlight { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+        .competency-tag.accent { background: #fef9c3; color: #854d0e; border-color: #fef08a; }
+
+        .software-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .software-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; display: flex; align-items: center; gap: 15px; }
+        .software-info h4 { margin: 0; font-size: 0.95rem; color: var(--primary); }
+        .software-info p { margin: 2px 0 0 0; font-size: 0.82rem; color: var(--light-neutral); }
+
+        .lang-list { display: flex; gap: 30px; }
+        .lang-item h4 { margin: 0; color: var(--primary); font-size: 1rem; }
+        .lang-item p { margin: 2px 0 0 0; color: var(--light-neutral); font-size: 0.9om; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Hero Banner (Fully Fixed Stable Images) -->
+    <div class="hero-banner">
+        <div class="profile-frame">
+            <!-- صورتك الشخصية برابط ويب مباشر مستقر تماماً -->
+            <img src="https://ibb.co" alt="Mahmoud Ahmed Hussien" class="profile-img">
+        </div>
+        
+        <div class="header-meta">
+            <h1>Mahmoud Ahmed Hussien</h1>
+            <div class="headline">Senior Production Engineer | Quality & Process Improvement Specialist</div>
+            
+            <div class="contact-grid">
+                <div>📌 10th of Ramadan City, Sharqia, Egypt</div>
+                <div>✉️ mahmoudahmed3409430@gmail.com</div>
+                <div>📞 +201200064520</div>
+                <div>🌐 <a href="https://linkedin.com" target="_blank">Open LinkedIn Profile</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Corporate Brand Tracks Ribbon -->
+    <div class="brands-section">
+        <div class="brand-logo">📺 <span class="haier">Haier</span></div>
+        <div class="brand-logo">❄️ <span class="sharp">Sharp</span></div>
+        <div class="brand-logo">🏭 <span class="araby">El-Araby Group</span></div>
+        <div class="brand-logo">💨 <span>HVAC Systems</span></div>
+    </div>
+
+    <!-- Analytics Dashboard -->
+    <div class="dashboard-container">
+        <h3>Industrial Impact & Process Optimization Dashboard (From vs To)</h3>
+        <div class="dashboard-grid">
+            <div class="dashboard-card"><div class="value">88% ➔ 104%</div><div class="label">HAIER Output</div></div>
+            <div class="dashboard-card"><div class="value">95% ➔ 112%</div><div class="label">ARABY Output</div></div>
+            <div class="dashboard-card"><div class="value">63K ➔ 35K</div><div class="label">Defects Drop (PPM)</div></div>
+            <div class="dashboard-card"><div class="value">17h ➔ 4h</div><div class="label">Downtime</div></div>
+            <div class="dashboard-card"><div class="value">0.99 ➔ 1.72</div><div class="label">Process Cap (Cpk)</div></div>
+        </div>
+    </div>
+
+    <!-- ACCORDION SYSTEM -->
+    <div class="accordion-container">
+
+        <!-- Section 1: Summary profile -->
+        <div class="accordion-item active">
+            <div class="accordion-header" onclick="toggleAccordion(this)"><span>Executive Profile & Vision</span><span>▼</span></div>
+            <div class="accordion-content"><div class="accordion-body">
+                <p class="summary-block">
+                    Results-driven Senior Production Engineer and Process Improvement Specialist with over 6 years of expertise leading high-volume manufacturing lines and quality workflows within world-class multinational environments. Demonstrated history of bridging shop-floor operations with strategic corporate directives under structured Chinese and Japanese operational cultures (Haier Egypt & El-Araby Group). Proficient in orchestrating Lean Six Sigma structures, Statistical Process Control (SPC), and strict HSE parameters to constantly enhance Overall Equipment Effectiveness (OEE) and eliminate systemic waste.
+                </p>
+            </div></div>
+        </div>
+
+        <!-- Section 2: Executive Honors & Industry Commendations -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)"><span>Executive Honors & Factory Performance Awards</span><span>▼</span></div>
+            <div class="accordion-content"><div class="accordion-body">
+                
+                <div class="showcase-block">
+                    <h4>🏆 Haier Annual Ceremony — Best Cost & Efficiency Award</h4>
+                    <p>Honored for active cross-functional leadership in process improvement vectors, achieving a landmark 56% increase in Units Per Hour (UPH) and 59% in UPPH, alongside cutting Bill of Materials (BOM) overheads by 7%.</p>
+                    <div class="document-wrapper">
+                        <!-- صورة تكريم هاير من سيرفر جيت هاب المستقر المباشر -->
+                        <img src="https://github.io" alt="Haier Award" class="document-img" onerror="this.src='https://ibb.co'">
+                    </div>
+                </div>
+
+                <div class="showcase-block">
+                    <h4>📈 Sharp Appliances (ELARABY Group) — Refrigerator Factory GM Commendation</h4>
+                    <p>Official executive commendation from the Refrigerator Factory General Manager for exceptional shift management, leadership under high-pressure parameters across 8 assembly sections, and maintaining excellent line balancing throughput targets.</p>
+                    <div class="document-wrapper">
+                        <!-- صورة تكريم العربي من سيرفر جيت هاب المستقر المباشر -->
+                        <img src="https://github.io" alt="Sharp GM Commendation" class="document-img" onerror="this.src='https://ibb.co'">
+                    </div>
+                </div>
+
+            </div></div>
+        </div>
+
+        <!-- Section 3: Experience track records -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)"><span>Industrial Track Record & Experience</span><span>▼</span></div>
+            <div class="accordion-content"><div class="accordion-body">
+                <div class="timeline-item">
+                    <div class="timeline-title"><span>Senior Production Engineer (TV Plant)</span><span>08/2025 - Present</span></div>
+                    <div class="timeline-sub"><span>HAIER Egypt Electric</span><span>Sharqia, Egypt</span></div>
+                    <ul>
+                        <li>Spearhead television assembly plant operations, supervising high-capacity workflows within a multinational corporate structure.</li>
+                        <li>Implement rigorous Line Balancing and industrial ergonomics to fulfill aggressive weekly product yield parameters.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title"><span>Factory Manager (HVAC Systems Plant)</span><span>10/2024 - 08/2025</span></div>
+                    <div class="timeline-sub"><span>ASAB Factory</span><span>Riyadh, Saudi Arabia</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title"><span>Process Quality Control Engineer (Tempered Glass Industry — ELARABY Group)</span><span>01/2023 - 10/2024</span></div>
+                    <div class="timeline-sub"><span>Tempered Glass Manufacturing Plant (ELARABY Group)</span><span>Menofiya, Egypt</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title"><span>Assembly Line Engineer & Shift Manager (Sharp Appliances)</span><span>01/2019 - 12/2023</span></div>
+                    <div class="timeline-sub"><span>Sharp Refrigerators (ELARABY Group)</span><span>Menofiya, Egypt</span></div>
+                </div>
+            </div></div>
+        </div>
+
+        <!-- Section 4: Verified Board Documents Showcase Gallery -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)"><span>Global Certified Credentials Matrix</span><span>▼</span></div>
+            <div class="accordion-content"><div class="accordion-body">
+                
+                <div class="matrix-grid" style="margin-bottom: 25px;">
+                    <div class="matrix-card" style="border-left: 3px solid var(--secondary);">
+                        <div class="cert-visual-icon">CQE</div>
+                        <div class="matrix-details">
+                            <h4>Certified Quality Engineer (CQE) — 200 Hours</h4>
+                            <p>The Excellence Center | Lean Six Sigma Council</p>
+                            <div class="credential">S/N: EC-CQE-1023-12</div>
+                        </div>
+                    </div>
+                    <div class="matrix-card" style="border-left: 3px solid #dc2626;">
+                        <div class="cert-visual-icon">HSE</div>
+                        <div class="matrix-details">
+                            <h4>Occupational Safety & Environmental Compliance (HSE)</h4>
+                            <p>OHS Institute | Statutory Safety Committees (Law 12/2003)</p>
+                            <div class="credential">S/N: 50/p/3631 | Menofiya Authority</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin: 20px 0 10px 0; color: var(--primary);">Document Verification Showcase (Paper Credentials)</h4>
+                
+                <div class="showcase-block">
+                    <p><strong>Certified Quality Engineer (200-Hour Advanced Board)</strong></p>
+                    <div class="document-wrapper">
+                        <!-- صورة شهادة الـ CQE من سيرفر جيت هاب المستقر المباشر -->
+                        <img src="https://github.io" class="document-img" onerror="this.src='https://ibb.co'">
+                    </div>
+                </div>
+
+                <div class="showcase-block">
+                    <p><strong>National Statutory Occupational Safety and Health (HSE Certificate)</strong></p>
+                    <div class="document-wrapper">
+                        <!-- صورة شهادة السلامة من سيرفر جيت هاب المستقر المباشر -->
+                        <img src="https://github.io" class="document-img" onerror="this.src='https://ibb.co'">
+                    </div>
+                </div>
+
+                <div class="showcase-block">
+                    <p><strong>Lean Six Sigma: Black Belt Executive Management Credential</strong></p>
+                    <div class="document-wrapper">
+                        <!-- صورة شهادة البلاك بيلت من سيرفر جيت هاب المستقر المباشر -->
+                        <img src="https://github.io" class="document-img" onerror="this.src='https://ibb.co'">
+                    </div>
+                </div>
+
+                <div class="showcase-block">
+                    <p><strong>Mastering TQM: Total Quality Management Systems (Coursera)</strong></p>
+                    <div class="document-wrapper">
+                        <!-- صورة شهادة التوتال كواليتي من سيرفر جيت هاب المستقر المباشر -->
+                        <img src="https://github.io" class="document-img" onerror="this.src='https://ibb.co'">
+                    </div>
+                </div>
+
+            </div></div>
+        </div>
+
+        <!-- Section 5: Softwares -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)"><span>Engineering Softwares Ecosystem</span><span>▼</span></div>
+            <div class="accordion-content"><div class="accordion-body">
+                <div class="software-grid">
+                    <div class="software-card"><div class="software-icon">📈</div><div class="software-info"><h4>Minitab</h4><p>Advanced Statistical Quality & SPC Capability Analysis</p></div></div>
+                    <div class="software-card"><div class="software-icon">📊</div><div class="software-info"><h4>Arena Simulation</h4><p>Industrial Process Mapping & Capacity Bottleneck Analysis</p></div></div>
+                    <div class="software-card"><div class="software-icon">⚙️</div><div class="software-info"><h4>SolidWorks</h4><p>Mechanical & Layout Designing and Integration</p></div></div>
+                    <div class="software-card"><div class="software-icon">📝</div><div class="software-info"><h4>Microsoft Office Suite (Advanced Excel)</h4><p>Macro KPI Dashboards & Balanced Scorecard Deployments</p></div></div>
+                </div>
+            </div></div>
+        </div>
+
+    </div>
+    <!-- END OF ACCORDION SYSTEM -->
+
+</div>
+
+<script>
+    function toggleAccordion(header) {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
