@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahmoud Ahmed Hussien | Chief Production & Quality Operations Director</title>
-    <!-- FontAwesome Library for Industry Icons -->
+    <title>Mahmoud Ahmed Hussien | Senior Production & Quality Specialist</title>
+    <!-- FontAwesome Library for Executive Industry Icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
@@ -26,13 +26,13 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Hero Banner with Engineering Blueprint Background Pattern */
+        /* Hero Banner with Executive Engineering Background Pattern */
         .hero-banner {
-            background: linear-gradient(135deg, rgba(11, 34, 64, 0.95), rgba(15, 46, 86, 0.9)), 
+            background: linear-gradient(135deg, rgba(11, 34, 64, 0.96), rgba(15, 46, 86, 0.92)), 
                         url('https://unsplash.com');
             background-size: cover;
             background-position: center;
-            padding: 60px 50px;
+            padding: 55px 50px;
             color: #ffffff;
             border-radius: 16px 16px 0 0;
             display: flex;
@@ -73,7 +73,7 @@
         }
 
         .header-meta h1 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             margin: 0 0 6px 0;
             font-weight: 700;
             letter-spacing: -0.5px;
@@ -81,7 +81,7 @@
         }
 
         .header-meta .headline {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--secondary);
             font-weight: 600;
             margin-bottom: 20px;
@@ -114,7 +114,7 @@
             width: 18px;
         }
 
-        /* Brand Logos Grid section */
+        /* Corporate Track Record Track Logos */
         .brands-section {
             background: #ffffff;
             padding: 25px 50px;
@@ -128,9 +128,9 @@
 
         .brand-logo {
             font-weight: 800;
-            font-size: 1.3rem;
-            color: #94a3b8;
-            letter-spacing: 1px;
+            font-size: 1.25rem;
+            color: #64748b;
+            letter-spacing: 0.5px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -142,45 +142,60 @@
         .brand-logo span.araby { color: #0b2240; }
 
         .brand-logo i {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
 
-        /* Executive Metrics Dashboard */
+        /* Dynamic From-To Analytics Dashboard */
         .dashboard-container {
-            padding: 30px 50px 10px 50px;
+            padding: 35px 50px 10px 50px;
+        }
+
+        .dashboard-container h3 {
+            margin: 0 0 20px 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+            font-weight: 700;
         }
 
         .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
         }
 
         .dashboard-card {
             background: #f8fafc;
-            padding: 18px;
+            padding: 15px 10px;
             border-radius: 8px;
             border: 1px solid #e2e8f0;
             text-align: center;
             border-bottom: 3px solid var(--primary);
+            transition: all 0.2s ease;
+        }
+
+        .dashboard-card:hover {
+            border-color: var(--secondary);
+            background: #ffffff;
         }
 
         .dashboard-card .value {
-            font-size: 1.7rem;
+            font-size: 1.45rem;
             font-weight: 700;
             color: var(--primary);
         }
 
         .dashboard-card .label {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             color: var(--light-neutral);
             margin-top: 4px;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
-        /* Interactive Dropdown (Accordion) Styling */
+        /* Interactive Accordion System */
         .accordion-container {
             padding: 20px 50px 50px 50px;
         }
@@ -197,7 +212,7 @@
         .accordion-header {
             background: #f8fafc;
             padding: 20px 24px;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
@@ -250,7 +265,7 @@
             color: var(--dark-neutral);
         }
 
-        /* Timeline / Job Items */
+        /* Experience Timeline Layout */
         .timeline-item {
             margin-bottom: 25px;
             padding-bottom: 20px;
@@ -289,7 +304,7 @@
             font-size: 0.98rem;
         }
 
-        /* Grid for Certifications with Visual Image Icons */
+        /* Matrix Cards for Certifications */
         .matrix-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -321,15 +336,8 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.03);
         }
 
-        .cert-visual-icon.linkedin-badge {
-            color: #0077b5;
-            border-color: #0077b5;
-        }
-
-        .cert-visual-icon.coursera-badge {
-            color: #0056d2;
-            border-color: #0056d2;
-        }
+        .cert-visual-icon.linkedin-badge { color: #0077b5; border-color: #0077b5; }
+        .cert-visual-icon.coursera-badge { color: #0056d2; border-color: #0056d2; }
 
         .matrix-details h4 {
             margin: 0 0 4px 0;
@@ -357,7 +365,7 @@
             font-weight: 600;
         }
 
-        /* Core Competencies Tag Clouds */
+        /* Core Competencies & Software Grids */
         .competency-box {
             display: flex;
             flex-wrap: wrap;
@@ -374,21 +382,48 @@
             border: 1px solid #e2e8f0;
         }
 
-        .competency-tag.highlight {
-            background: var(--primary);
-            color: #ffffff;
-            border-color: var(--primary);
+        .competency-tag.highlight { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+        .competency-tag.accent { background: #fef9c3; color: #854d0e; border-color: #fef08a; }
+
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
         }
 
-        .competency-tag.accent {
-            background: #fef9c3;
-            color: #854d0e;
-            border-color: #fef08a;
+        .software-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
+
+        .software-icon {
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .software-info h4 { margin: 0; font-size: 0.95rem; color: var(--primary); }
+        .software-info p { margin: 2px 0 0 0; font-size: 0.82rem; color: var(--light-neutral); }
+
+        .lang-list { display: flex; gap: 30px; }
+        .lang-item h4 { margin: 0; color: var(--primary); font-size: 1rem; }
+        .lang-item p { margin: 2px 0 0 0; color: var(--light-neutral); font-size: 0.9rem; }
 
         @media (max-width: 850px) {
             .hero-banner { flex-direction: column; text-align: center; gap: 20px; padding: 40px 20px; }
-            .contact-grid, .matrix-grid, .dashboard-grid, .brands-section { grid-template-columns: 1fr; }
+            .contact-grid, .matrix-grid, .dashboard-grid, .software-grid { grid-template-columns: 1fr; }
             .timeline-title, .timeline-sub { flex-direction: column; gap: 2px; }
             .accordion-container, .dashboard-container, .brands-section { padding-left: 20px; padding-right: 20px; }
         }
@@ -398,7 +433,7 @@
 
 <div class="container">
 
-    <!-- Hero Banner Wrapper with Blueprint Tech Background -->
+    <!-- Hero Banner with Blueprint Background -->
     <div class="hero-banner">
         <div class="profile-frame">
             <img src="https://ibb.co" alt="Mahmoud Ahmed Hussien" class="profile-img">
@@ -406,7 +441,7 @@
         
         <div class="header-meta">
             <h1>Mahmoud Ahmed Hussien</h1>
-            <div class="headline">Chief Production & Quality Operations Director</div>
+            <div class="headline">Senior Production Engineer | Quality & Process Improvement Specialist</div>
             
             <div class="contact-grid">
                 <div><i class="fa-solid fa-location-dot"></i>10th of Ramadan City, Sharqia, Egypt</div>
@@ -417,7 +452,7 @@
         </div>
     </div>
 
-    <!-- Corporate Brand Affiliations / Track Record Logos -->
+    <!-- Corporate Brand Tracks -->
     <div class="brands-section">
         <div class="brand-logo"><i class="fa-solid fa-tv"></i> <span class="haier">Haier</span></div>
         <div class="brand-logo"><i class="fa-solid fa-snowflake"></i> <span class="sharp">Sharp</span></div>
@@ -425,29 +460,34 @@
         <div class="brand-logo"><i class="fa-solid fa-wind"></i> <span>HVAC Systems</span></div>
     </div>
 
-    <!-- Operational KPI Dashboard -->
+    <!-- Data-Driven Before vs After Analytics Dashboard -->
     <div class="dashboard-container">
+        <h3>Industrial Impact & Process Optimization Dashboard (From vs To)</h3>
         <div class="dashboard-grid">
             <div class="dashboard-card">
-                <div class="value">112%</div>
-                <div class="label">Max Line Yield</div>
+                <div class="value">88% ➔ 104%</div>
+                <div class="label">HAIER Yield Output</div>
             </div>
             <div class="dashboard-card">
-                <div class="value">84%</div>
-                <div class="label">OEE Efficiency</div>
+                <div class="value">95% ➔ 112%</div>
+                <div class="label">ARABY Yield Output</div>
             </div>
             <div class="dashboard-card">
-                <div class="value">-44%</div>
-                <div class="label">PPM Defect Drop</div>
+                <div class="value">63K ➔ 35K</div>
+                <div class="label">Defects Drop (PPM)</div>
             </div>
             <div class="dashboard-card">
-                <div class="value">4 Hrs</div>
+                <div class="value">17h ➔ 4h</div>
                 <div class="label">Monthly Downtime</div>
+            </div>
+            <div class="dashboard-card">
+                <div class="value">0.99 ➔ 1.72</div>
+                <div class="label">SPC Process Cap (Cpk)</div>
             </div>
         </div>
     </div>
 
-    <!-- START OF ACCORDION SYSTEM -->
+    <!-- ACCORDION SYSTEM -->
     <div class="accordion-container">
 
         <!-- Section 1: Executive Profile (Open by Default) -->
@@ -459,16 +499,16 @@
             <div class="accordion-content">
                 <div class="accordion-body">
                     <p class="summary-block">
-                        Highly accomplished and metrics-driven Industrial Production & Quality Operations Director with over 6 years of executive expertise directing massive manufacturing plants within premier multinational environments. Proven authority in aligning macro-operational targets with corporate strategic directives across complex Chinese and Japanese manufacturing cultures (Haier Egypt & El-Araby Group). Masters the application of Lean Six Sigma systems, Total Quality Management (TQM) principles, and advanced automation optimization to maximize OEE, enhance workforce synergy, and implement strict HSE compliance codes across safety-centric environments.
+                        Results-driven Senior Production Engineer and Process Improvement Specialist with over 6 years of expertise leading high-volume manufacturing lines and quality workflows within world-class multinational environments. Demonstrated history of bridging shop-floor operations with strategic corporate directives under structured Chinese and Japanese operational cultures (Haier Egypt & El-Araby Group). Proficient in orchestrating Lean Six Sigma structures, Statistical Process Control (SPC), and strict HSE parameters to constantly enhance Overall Equipment Effectiveness (OEE) and eliminate systemic waste.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- Section 2: Industrial Track Record -->
+        <!-- Section 2: Professional Track Record -->
         <div class="accordion-item">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Industrial Sessional Track Record</span>
+                <span>Industrial Track Record</span>
                 <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
             <div class="accordion-content">
@@ -511,11 +551,11 @@
                             <span>01/2023 - 10/2024</span>
                         </div>
                         <div class="timeline-sub">
-                            <span>Tempered Glass Manufacturing Plant</span>
-                            <span>Sharqia, Egypt</span>
+                            <span>Tempered Glass Manufacturing Plant (ELARABY Group)</span>
+                            <span>Menofiya, Egypt</span>
                         </div>
                         <ul>
-                            <li>Governed critical plant metrics (OEE, PPM, COPQ) and executed statistical capability studies to optimize process stability.</li>
+                            <li>Governed critical plant metrics (OEE, PPM, COPQ) and executed statistical capability studies to optimize process stability, accelerating Cpk from 0.998 to 1.72.</li>
                             <li>Leveraged advanced quality assurance utilities (SPC, FMEA, 8D Root Cause Analysis) to establish strict product compliance.</li>
                         </ul>
                     </div>
@@ -530,7 +570,7 @@
                             <span>Menofiya, Egypt</span>
                         </div>
                         <ul>
-                            <li>Supervised large-scale assembly procedures, executing direct management across 8 foundational manufacturing segments.</li>
+                            <li>Directed and managed full-shift operations across 8 integrated manufacturing and assembly sections.</li>
                             <li>Embedded Japanese corporate excellence practices (Kaizen, 5S) to constantly lower scrap volumes and overhead costs.</li>
                         </ul>
                     </div>
@@ -539,7 +579,7 @@
             </div>
         </div>
 
-        <!-- Section 3: Verified Credentials Matrix -->
+        <!-- Section 3: Credentials Matrix -->
         <div class="accordion-item">
             <div class="accordion-header" onclick="toggleAccordion(this)">
                 <span>Global Certified Credentials Matrix</span>
@@ -597,27 +637,9 @@
                         <div class="matrix-card">
                             <div class="cert-visual-icon linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></div>
                             <div class="matrix-details">
-                                <h4>How to Measure and Improve Organizational Performance</h4>
+                                <h4>Management Foundations</h4>
                                 <p>LinkedIn Learning | Project Management Institute (PMI)</p>
-                                <div class="credential">ID: 948fa3eb0904fa57eb1013f14b03f2f3bb6a641ce11d9bcc7ed21f2664e0b7ba5</div>
-                            </div>
-                        </div>
-
-                        <div class="matrix-card">
-                            <div class="cert-visual-icon linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></div>
-                            <div class="matrix-details">
-                                <h4>Skills for Your First 90 Days as a New Manager</h4>
-                                <p>LinkedIn Learning | Leadership Development</p>
-                                <div class="credential">ID: 39206351f475a5ffe0f4813a49dde3fd8292071763a059eb54559c4c4594322c</div>
-                            </div>
-                        </div>
-
-                        <div class="matrix-card">
-                            <div class="cert-visual-icon linkedin-badge"><i class="fa-brands fa-linkedin-in"></i></div>
-                            <div class="matrix-details">
-                                <h4>Management Essentials & Corporate Strategy</h4>
-                                <p>LinkedIn Learning | PMI Endorsed Framework</p>
-                                <div class="credential">ID: c9d2758ccdb80f11a39e4304b9e159c96e3fd7bf4877e74cc07ed22e84c0f0af</div>
+                                <div class="credential">ID: 314a3da1e95a41085ded1311b19e4104ba1372579cbe4457cf9fb3c1ede9c1a2b4a11d9d139</div>
                             </div>
                         </div>
 
@@ -626,39 +648,96 @@
             </div>
         </div>
 
-        <!-- Section 4: Core Competencies -->
+        <!-- Section 4: Engineering Softwares & Ecosystem -->
         <div class="accordion-item">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Core Expertise & Operational Vectors</span>
+                <span>Engineering Softwares & Systems Ecosystem</span>
+                <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="software-grid">
+                        
+                        <div class="software-card">
+                            <div class="software-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="software-info">
+                                <h4>Minitab</h4>
+                                <p>Advanced Statistical Quality & SPC Capability Analysis</p>
+                            </div>
+                        </div>
+
+                        <div class="software-card">
+                            <div class="software-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <div class="software-info">
+                                <h4>Arena Simulation</h4>
+                                <p>Industrial Process Mapping & Capacity Bottleneck Analysis</p>
+                            </div>
+                        </div>
+
+                        <div class="software-card">
+                            <div class="software-icon"><i class="fa-solid fa-cube"></i></div>
+                            <div class="software-info">
+                                <h4>SolidWorks</h4>
+                                <p>Mechanical & Layout Designing and Integration</p>
+                            </div>
+                        </div>
+
+                        <div class="software-card">
+                            <div class="software-icon"><i class="fa-solid fa-file-excel"></i></div>
+                            <div class="software-info">
+                                <h4>Microsoft Office Suite (Advanced Excel)</h4>
+                                <p>Macro KPI Dashboards & Balanced Scorecard Deployments</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Soft Skills & Leadership Matrix -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Soft Skills & Leadership Matrix</span>
                 <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
             <div class="accordion-content">
                 <div class="accordion-body">
                     <div class="competency-box">
-                        <div class="competency-tag highlight">Operations Management & Leadership</div>
-                        <div class="competency-tag highlight">Six Sigma Black Belt Architecture</div>
-                        <div class="competency-tag highlight">Lean Manufacturing Infrastructure</div>
-                        <div class="competency-tag accent">Total Quality Management (TQM)</div>
+                        <div class="competency-tag highlight">Strategic Leadership & Team Synergy</div>
+                        <div class="competency-tag highlight">Cross-Cultural Multinational Communication (Japanese/Chinese)</div>
+                        <div class="competency-tag highlight">Advanced Problem-Solving & Root-Cause Thinking</div>
+                        <div class="competency-tag accent">Total Quality Management (TQM) Expert</div>
                         <div class="competency-tag accent">Certified Quality Engineering (CQE)</div>
-                        <div class="competency-tag">Statistical Process Control (SPC)</div>
-                        <div class="competency-tag">FMEA & Failure Analysis</div>
-                        <div class="competency-tag">HSE Workplace Safety Laws</div>
-                        <div class="competency-tag">Balanced Scorecard & Corporate KPIs</div>
-                        <div class="competency-tag">Advanced Data Analysis & Insights</div>
-                        <div class="competency-tag">ISO 9001:2015 Management Systems</div>
+                        <div class="competency-tag">Conflict Resolution & Operations Stabilization</div>
+                        <div class="competency-tag">High-Stakes Decision Making Under Pressure</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Section 5: Academic Foundation -->
+        <!-- Section 6: Languages & Education -->
         <div class="accordion-item">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Academic Foundation</span>
+                <span>Languages & Education Background</span>
                 <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
             <div class="accordion-content">
                 <div class="accordion-body">
+                    
+                    <h3>Languages Proficiency</h3>
+                    <div class="lang-list" style="margin-bottom: 30px;">
+                        <div class="lang-item">
+                            <h4>Arabic</h4>
+                            <p>Native or Bilingual Proficiency (Mother Tongue)</p>
+                        </div>
+                        <div class="lang-item">
+                            <h4>English</h4>
+                            <p>Advanced / Professional Working Proficiency</p>
+                        </div>
+                    </div>
+
+                    <h3>Academic Credentials</h3>
                     <div class="timeline-item" style="margin-bottom: 0;">
                         <div class="timeline-title">
                             <span>Bachelor of Mechanical Engineering</span>
@@ -670,6 +749,7 @@
                         </div>
                         <p style="margin: 5px 0 0 0; color: var(--light-neutral); font-size: 0.95rem;">Specialization: Industrial & Mechanical Systems Integration</p>
                     </div>
+
                 </div>
             </div>
         </div>
